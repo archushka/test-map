@@ -36,8 +36,8 @@ var lyr_T_2 = new ol.layer.Vector({
                 style: style_T_2,
                 interactive: true,
     title: 'Tяжелые металлы в почвах<br />\
-    <img src="styles/legend/T_2_0.png" /> Районы по которым обследование почв не проводилось<br />\
-    <img src="styles/legend/T_2_1.png" /> Районы по которым проведено обследование почв<br />'
+    <img src="styles/legend/T_2_0.png" /> Районы по которым<br> обследование почв <br>не проводилось<br />\
+    <img src="styles/legend/T_2_1.png" /> Районы по которым <br>проведено обследование почв<br />'
         });
 var format_P_3 = new ol.format.GeoJSON();
 var features_P_3 = format_P_3.readFeatures(json_P_3, 
@@ -61,8 +61,8 @@ var lyr_P_3 = new ol.layer.Vector({
 
 lyr_K_0.setVisible(true);lyr_C10_1.setVisible(false);lyr_T_2.setVisible(false);lyr_P_3.setVisible(true);
 var layersList = [lyr_K_0,lyr_C10_1,lyr_T_2,lyr_P_3];
-lyr_T_2.set('fieldAliases', {'name': 'name', 'Co': 'Co', 'Cu': 'Cu', 'Zn': 'Zn', });
-lyr_P_3.set('fieldAliases', {'name': 'name', 'area': 'area', 'plow': 'plow', });
+lyr_T_2.set('fieldAliases', {'name':'название района', 'Co': 'Co, мг/кг', 'Cu': 'Cu, мг/кг', 'Zn': 'Zn, мг/кг', });
+lyr_P_3.set('fieldAliases', {'name': 'название района', 'area': 'площадь, га', 'plow': 'площадь обрабатываемых <br> земель', });
 lyr_T_2.set('fieldImages', {'name': 'TextEdit', 'Co': 'TextEdit', 'Cu': 'TextEdit', 'Zn': 'TextEdit', });
 lyr_P_3.set('fieldImages', {'name': 'TextEdit', 'area': 'TextEdit', 'plow': 'TextEdit', });
 lyr_T_2.set('fieldLabels', {'name': 'inline label', 'Co': 'inline label', 'Cu': 'inline label', 'Zn': 'inline label', });
